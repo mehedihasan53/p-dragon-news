@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router";
 import Root from "../layouts/Root";
 import Navbar from "../Components/header/Navbar";
+import About from "../pages/About";
+import Career from "../pages/Career";
+import CategoryNews from "../pages/CategoryNews";
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +16,15 @@ export const router = createBrowserRouter([
       },
       {
         path: "/about",
-        Component: () => <h1>About</h1>,
+        Component: About,
+      },
+      {
+        path: "/career",
+        Component: Career,
+      },
+      {
+        path: "/categories/:id",
+        Component: CategoryNews,
       },
     ],
   },
